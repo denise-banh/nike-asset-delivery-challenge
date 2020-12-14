@@ -4,6 +4,7 @@ public class Board implements IBoard {
 
     private Square[] board;
 
+    // Initialize a brand new board
     public Board(){
         board =  new Square[9];
         initializeBoard();

@@ -13,14 +13,14 @@ public class WinCombinationFactory {
     public List<int[]> buildWinCombinations(){
         List<int[]> winConditions = new ArrayList<int[]>();
 
-        winConditions.add(new int[]{1, 2, 3});
-        winConditions.add(new int[]{4, 5, 6});
-        winConditions.add(new int[]{7, 8, 9});
+        winConditions.add(new int[]{0, 1, 2});
+        winConditions.add(new int[]{3, 4, 5});
+        winConditions.add(new int[]{6, 7, 8});
+        winConditions.add(new int[]{0, 3, 6});
         winConditions.add(new int[]{1, 4, 7});
         winConditions.add(new int[]{2, 5, 8});
-        winConditions.add(new int[]{3, 6, 9});
-        winConditions.add(new int[]{1, 5, 9});
-        winConditions.add(new int[]{3, 5, 7});
+        winConditions.add(new int[]{0, 4, 8});
+        winConditions.add(new int[]{2, 4, 6});
 
         return winConditions;
     }

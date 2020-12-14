@@ -3,6 +3,7 @@ package Question4;
 import Question1.DataStructure1.Board;
 import Question1.DataStructure1.Square;
 import Question1.DataStructure1.SquareValue;
+import Question2And3.BoardUtilities;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -106,5 +107,14 @@ public class BoardTests {
 
         // Act/Assert
         Assert.assertFalse(board.inProgress());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testBoardConstructor_NewBoardIsNot9InLength_IllegalArgumentExceptionThrown() {
+        // Arrange
+        Square[] newBoard = new Square[7];
+
+        // Act/Assert
+        Board board = new Board(newBoard);
     }
 }

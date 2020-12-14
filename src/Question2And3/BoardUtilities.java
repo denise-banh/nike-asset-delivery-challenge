@@ -1,6 +1,7 @@
 package Question2And3;
 
 import Question1.DataStructure1.Board;
+import Question1.DataStructure1.IBoard;
 import Question1.DataStructure1.Square;
 import Question1.DataStructure1.SquareValue;
 import Utilities.WinCombinationFactory;
@@ -9,17 +10,21 @@ import Enum.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game {
+public class BoardUtilities {
 
     private List<int[]> winCombinations;
     
-    public Game() {
+    public BoardUtilities() {
         WinCombinationFactory factory = new WinCombinationFactory();
         winCombinations = factory.buildWinCombinations();
     }
 
     // QUESTION 2
     public Player determineWinner(Board value) {
+        if(value == null) {
+            throw new IllegalArgumentException("Board is required");
+        }
+
         Square[] board = value.getBoard();
 
         for (int[] positions : winCombinations) {
