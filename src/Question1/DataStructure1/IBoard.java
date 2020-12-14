@@ -2,9 +2,6 @@ package Question1.DataStructure1;
 
 public interface IBoard{
 
-    // A 3x3 bar is initialized as an array of 9 Square objects
-    Square[] Board = new Square[9];
-
     // Returns whether the Board is empty
     boolean isEmpty();
 
